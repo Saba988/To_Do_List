@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do List</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <div class="top-bar">
-    <div class="top-bar-left">
-      <h1>To-Do List</h1>
-    </div>
-    <div class="top-bar-right">
-      <button onclick="addTask()" class="top-add-btn">Add Task</button>
-      <button id="mode-toggle">🌙</button>
-    </div>
+    <h1>To-Do List</h1>
+    <button id="mode-toggle">🌙</button>
   </div>
 
   <div class="center-wrapper">
     <div class="todo-container">
+
       <div class="input-group">
-        <input type="text" id="todo-input" placeholder="Enter your task..." />
-        <input type="date" id="due-date" />
-        <select id="priority">
-          <option value="low">Low</option>
-          <option value="normal" selected>Normal</option>
-          <option value="high">High</option>
-        </select>
+        
+        <div class="input-row">
+          <input type="text" id="todo-input" placeholder="Enter your task..." />
+          <input type="date" id="due-date" />
+        </div>
+
+        <div class="bottom-row">
+          <select id="priority">
+            <option value="low">Low</option>
+            <option value="normal" selected>Normal</option>
+            <option value="high">High</option>
+          </select>
+          <button id="add-btn" onclick="addTask()">Add Task</button>
+        </div>
+
       </div>
 
       <div class="counters">
